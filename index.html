@@ -1,95 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Hero Section with Video Background */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        /* Image Box Section */
-        .image-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            background-color: #f5f5f5;
-            margin-top: 30px;
-        }
-
-        .image-box img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* Container for the entire page */
-        .container {
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Hero Section with Video Background -->
-    <div class="hero">
-        <video autoplay muted loop>
-            <source src="assets/hero.mp4" type="video/mp4">
+    <div class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="assets/videos/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>Your content here</p>
-        </div>
     </div>
 
-    <!-- Image Box Section -->
-    <div class="container">
-        <div class="image-box">
-            <img src="assets/home-image.jpg" alt="Home Image">
-        </div>
+    <div class="content-box">
+        <img src="assets/images/your-image.jpg" alt="Preview Image">
+        <h1>Welcome to My Website</h1>
+        <p>Experience the best design and innovation</p>
     </div>
 
 </body>
