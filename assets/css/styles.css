@@ -10,7 +10,7 @@
 .background-video {
   position: absolute;
   display: block;          /* Makes video a block element */
-  vertical-align: middle;  /* Aligns video properly in layouts */
+  vertical-align: auto;  /* Aligns video properly in layouts */
   max-width: 100%;         /* Prevents overflow */
   height: auto; 
   margin-top: 0em;
