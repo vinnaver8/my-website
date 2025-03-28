@@ -1,38 +1,11 @@
-/* Background Video - Fullscreen */
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* Main container */
-.media-container {
+.video-container {
     position: relative;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Video/Image wrapper with 9:16 aspect ratio */
-.media-wrapper {
-    position: relative;
-    width: 40vw; /* Adjust size to maintain 9:16 */
-    height: 71.11vw; /* (9/16 ratio of width) */
-    max-height: 90vh; /* Prevents overflowing screen */
-    max-width: 50vh; /* Prevents getting too wide */
     overflow: hidden;
-    border-radius: 12px; /* Optional rounded corners */
 }
 
-/* Image or video inside */
-.media-element {
+.background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,35 +14,11 @@
     object-fit: cover;
 }
 
-/* Centered Content Box */
-.content-box {
+.overlay-image {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.6); /* Optional: Semi-transparent background */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Image inside content box */
-.preview-image {
-    max-width: 60%;
+    width: 30%; /* Adjust to match the box size */
     height: auto;
-    margin-bottom: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .media-wrapper {
-        width: 50vw;
-        height: 88.89vw; /* Maintain 9:16 aspect ratio */
-    }
-  
-    .content-box {
-        width: 80%;
-        padding: 15px;
-    }
+    bottom: 10%; /* Adjust positioning */
+    left: 50%;
+    transform: translateX(-50%);
 }
