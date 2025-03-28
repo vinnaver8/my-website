@@ -1,73 +1,66 @@
-/* Reset default margins and padding */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Background video container */
+/* Background Video Styling */
 .video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; /* Ensure it stays behind content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    background: black;
 }
 
-/* Background video styling */
-.background-video {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  
-  /* Center the video */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  
-  /* Fallback if video doesn't cover entire area */
-  background: #000; /* Or your preferred fallback color */
+/* Ensures video covers entire screen */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.2) blur(10px);
 }
 
-/* Content box styling */
-.content-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 1200px;
-  padding: 2rem;
-  text-align: center;
-  
-  /* Glassmorphism effect */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* Overlay to blend video with content */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .content-box {
-    width: 95%;
-    padding: 1.5rem;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-  }
-  
-  .background-video {
-    /* For mobile, you might need to adjust aspect ratio */
+/* Overlay Box with Image */
+.overlay-box {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay Image */
+.overlay-box img {
     width: 100%;
     height: auto;
-    /* OR alternative approach for portrait mode */
-    /* width: auto;
-    height: 100%; */
-  }
+    object-fit: contain;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .overlay-box {
+        width: 90%;
+        padding: 15px;
+    }
 }
