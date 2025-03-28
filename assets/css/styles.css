@@ -1,12 +1,39 @@
+/* Reset default margins and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background video container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure it stays behind content */
+}
+
+/* Background video styling */
 .background-video {
   position: absolute;
-  display: block;   
-  vertical-align: auto;
-  max-width: 100%;
-  height: auto; 
-  margin-top: -1em;
-  margin-bottom: -1em;
-  }
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  
+  /* Center the video */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Fallback if video doesn't cover entire area */
+  background: #000; /* Or your preferred fallback color */
+}
 
 /* Content box styling */
 .content-box {
@@ -22,6 +49,7 @@
   /* Glassmorphism effect */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -31,5 +59,15 @@
     width: 95%;
     padding: 1.5rem;
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
+  
+  .background-video {
+    /* For mobile, you might need to adjust aspect ratio */
+    width: 100%;
+    height: auto;
+    /* OR alternative approach for portrait mode */
+    /* width: auto;
+    height: 100%; */
   }
+}
