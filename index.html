@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huly.io Styled Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My E-Commerce</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+
+    <!-- Fullscreen Background Video -->
+    <video autoplay loop muted class="background-video">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main Container -->
     <div class="media-container">
         <div class="media-wrapper">
-            <video class="media-element" autoplay loop muted playsinline>
-                <source src="assets/videos/hero.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <img src="assets/images/preview.png" class="media-element" alt="Preview Image">
         </div>
+
+        <!-- Centered Content Box -->
         <div class="content-box">
-            <img src="assets/images/preview.png" alt="E-Commerce Preview" class="preview-image">
-            <div class="text-content">
-                <h1>Welcome to My E-Commerce</h1>
-                <p>Explore our AI-powered room transformation and e-commerce experience.</p>
-                <a href="#shop" class="btn">Shop Now</a>
-            </div>
+            <h1>Welcome to My E-Commerce</h1>
+            <p>Explore our AI-powered room transformation and e-commerce experience.</p>
+            <a href="#shop" class="btn">Shop Now</a>
         </div>
     </div>
+
 </body>
 </html>
