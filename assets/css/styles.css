@@ -9,19 +9,13 @@
 /* Background video styling */
 .background-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  
-  /* Maintain aspect ratio (common: 16:9 = 177.77%, 4:3 = 133.33%) */
-  aspect-ratio: 16/9;
-  object-fit: cover;
-}
+  display: block;          /* Makes video a block element */
+  vertical-align: middle;  /* Aligns video properly in layouts */
+  max-width: 100%;         /* Prevents overflow */
+  height: auto; 
+  margin-top: 2em;
+  margin-bottom: 2em;/* Maintains aspect ratio */
+  }
 
 /* Content box styling */
 .content-box {
