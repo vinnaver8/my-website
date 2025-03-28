@@ -1,20 +1,11 @@
-/* Full-screen video container */
-.hero-section {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Background video styling */
 .background-video {
   position: absolute;
-  display: block;          /* Makes video a block element */
-  vertical-align: auto;  /* Aligns video properly in layouts */
-  max-width: 100%;         /* Prevents overflow */
+  display: block;   
+  vertical-align: auto;
+  max-width: 100%;
   height: auto; 
   margin-top: 0em;
-  margin-bottom: 0em;/* Maintains aspect ratio */
+  margin-bottom: 0em;
   }
 
 /* Content box styling */
