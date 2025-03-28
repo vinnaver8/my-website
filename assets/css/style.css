@@ -1,15 +1,46 @@
-/* ... your existing CSS ... */
-
-.image-container {
-  width: 100%; /* Make the container take the full width of its parent */
-  max-width: 600px; /* Optional: set a maximum width for the image container */
-  margin: 0 auto; /* Center the image container horizontally */
-  overflow: hidden; /* Prevent the image from overflowing */
+/* Base container styling */
+.media-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your design needs */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.preview-image {
-  width: 100%; /* Make the image take the full width of its container */
-  height: auto; /* Maintain the aspect ratio */
-  object-fit: contain; /* Fit the image without cropping */
-  display: block; /* Remove any extra spacing below the image */
+/* Video/Image wrapper with aspect ratio control */
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (change to 75% for 4:3) */
+  overflow: hidden;
+  border-radius: 8px; /* Optional */
+}
+
+/* Actual media element styling */
+.media-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' based on your preference */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .media-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+  
+  .media-wrapper {
+    padding-top: 75%; /* Different aspect ratio for mobile if needed */
+  }
+}
+
+/* Prevent horizontal overflow at root level */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
