@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Your other head elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huly.io Inspired Design</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <div class="video-container">
-    <video class="background-video" autoplay muted loop>
-      <source src="assets/videos/hero.mp4" type="video/mp4">
-      <!-- Fallback content or image here -->
-    </video>
-  </div>
-  
-  <div class="content-box">
-    <!-- Your content here -->
-  </div>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Overlay Box with Image -->
+    <div class="overlay-box">
+        <img src="assets/images/preview.png" alt="Overlay Image">
+    </div>
+
 </body>
 </html>
