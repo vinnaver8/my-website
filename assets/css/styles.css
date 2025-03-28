@@ -32,8 +32,4 @@
     padding: 1.5rem;
     backdrop-filter: blur(5px);
   }
-  
-  .background-video {
-    aspect-ratio: 4/3;
   }
-}
