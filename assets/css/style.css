@@ -2,19 +2,23 @@
 .media-container {
   position: relative;
   width: 100%;
-  max-width: 1200px; /* Adjust based on your design needs */
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Video/Image wrapper with aspect ratio control */
 .media-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio (change to 75% for 4:3) */
+  padding-top: 177.78%; /* 9:16 aspect ratio */
   overflow: hidden;
-  border-radius: 8px; /* Optional */
+  border-radius: 8px;
 }
 
 /* Actual media element styling */
@@ -24,7 +28,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or 'contain' based on your preference */
+  object-fit: cover;
+}
+
+/* Content box styling */
+.content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+/* Image inside content box */
+.preview-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 /* Responsive adjustments */
@@ -35,12 +56,6 @@
   }
   
   .media-wrapper {
-    padding-top: 75%; /* Different aspect ratio for mobile if needed */
+    padding-top: 100%; /* Adjust for mobile */
   }
-}
-
-/* Prevent horizontal overflow at root level */
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
 }
