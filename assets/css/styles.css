@@ -13,8 +13,8 @@
   vertical-align: middle;  /* Aligns video properly in layouts */
   max-width: 100%;         /* Prevents overflow */
   height: auto; 
-  margin-top: 2em;
-  margin-bottom: 2em;/* Maintains aspect ratio */
+  margin-top: 1em;
+  margin-bottom: 1em;/* Maintains aspect ratio */
   }
 
 /* Content box styling */
